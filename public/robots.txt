@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://belajar-uas-anatomi.vercel.app/sitemap.xml
+Sitemap: https://anfis.rindia.my.id/sitemap.xml
