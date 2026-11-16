@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="id" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Anatomi Studio UAS — Radiologi Cross-Section &amp; Fisiologi Terpadu</title>
+    <meta
+      name="description"
+      content="Studio belajar &amp; simulasi UAS Anatomi Radiologi interaktif: 67 potongan Cross-Section Kepala, Thorax, Abdomen, Identifikasi TM 1–5, Kardiovaskuler, Peredaran Darah, Limb Atas, dan 12 Saraf Kranial."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#090d16" />
+    <meta name="google-site-verification" content="" />
+    <link rel="canonical" href="https://belajar-uas-anatomi.vercel.app/" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:site_name" content="Anatomi Studio UAS" />
+    <meta property="og:title" content="Anatomi Studio UAS — Radiologi Cross-Section &amp; Fisiologi Terpadu" />
+    <meta
+      property="og:description"
+      content="Latihan visual anatomi cross-section dengan mode tutup label, flashcard TM 1–5, tracer aliran darah, kalkulator curah jantung, dan Simulasi UAS 28 soal."
+    />
+    <meta property="og:url" content="https://belajar-uas-anatomi.vercel.app/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Anatomi Studio UAS — Radiologi Cross-Section &amp; Fisiologi Terpadu" />
+    <meta
+      name="twitter:description"
+      content="Persiapan UAS Anatomi Radiologi Semester 1: Cross-Section Kepala/Thorax/Abdomen, TM 1–5, Kardiovaskuler, Pembuluh Darah &amp; 12 Saraf Kranial."
+    />
+
+    <!-- Anti-Flash Theme Boot Script -->
+    <script>
+      (function () {
+        try {
+          var theme = localStorage.getItem('uas_anatomi_theme');
+          if (theme !== 'light' && theme !== 'dark') {
+            var raw = localStorage.getItem('uas_anatomi_state_v1');
+            if (raw) {
+              var parsed = JSON.parse(raw);
+              if (parsed && (parsed.theme === 'light' || parsed.theme === 'dark')) {
+                theme = parsed.theme;
+              }
+            }
+          }
+          var active = theme === 'light' ? 'light' : 'dark';
+          var root = document.documentElement;
+          root.classList.remove('dark', 'light');
+          root.classList.add(active);
+          root.style.colorScheme = active;
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+          document.documentElement.style.colorScheme = 'dark';
+        }
+      })();
+    </script>
+
+    <!-- Google Fonts: Space Grotesk, Plus Jakarta Sans, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Anatomi Studio UAS",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "Web",
+        "inLanguage": "id",
+        "url": "https://belajar-uas-anatomi.vercel.app/",
+        "description": "Aplikasi belajar interaktif persiapan UAS Anatomi Radiologi mencakup Cross-Section Kepala, Thorax, Abdomen, Identifikasi TM 1–5, Kardiovaskuler, Sistemik, Limb Atas, dan 12 Saraf Kranial.",
+        "provider": {
+          "@type": "EducationalOrganization",
+          "name": "Anatomi Studio Radiologi"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

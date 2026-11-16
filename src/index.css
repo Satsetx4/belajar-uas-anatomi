@@ -1,0 +1,126 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+@custom-variant light (&:where(.light, .light *));
+
+@theme {
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+:root,
+html.dark {
+  --bg-canvas: #090d16;
+  --bg-panel: #111827;
+  --bg-elevated: #0f172a;
+  --bg-glass: rgba(15, 23, 42, 0.82);
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --border-clinical: rgba(148, 163, 184, 0.16);
+  --accent-cyan: #22d3ee;
+  --accent-coral: #fb7185;
+  --grid-dot: rgba(34, 211, 238, 0.08);
+  color-scheme: dark;
+}
+
+html.light {
+  --bg-canvas: #f4f1ea;
+  --bg-panel: #ffffff;
+  --bg-elevated: #f8fafc;
+  --bg-glass: rgba(248, 250, 252, 0.86);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-clinical: rgba(15, 23, 42, 0.12);
+  --accent-cyan: #0891b2;
+  --accent-coral: #e11d48;
+  --grid-dot: rgba(8, 145, 178, 0.09);
+  color-scheme: light;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+  overflow-x: clip;
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-image:
+    radial-gradient(circle at 12% 8%, rgba(34, 211, 238, 0.09), transparent 36%),
+    radial-gradient(circle at 88% 14%, rgba(251, 113, 133, 0.08), transparent 34%),
+    radial-gradient(var(--grid-dot) 1px, transparent 1px);
+  background-size: 100% 100%, 100% 100%, 22px 22px;
+  background-attachment: fixed;
+  transition: background-color 0.25s ease, color 0.2s ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-mono,
+code,
+kbd {
+  font-family: var(--font-mono);
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.clinical-surface {
+  background-color: var(--bg-panel);
+  border: 1px solid var(--border-clinical);
+}
+
+.clinical-glass {
+  background-color: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+/* Custom sleek diagnostic scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.28);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 211, 238, 0.5);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

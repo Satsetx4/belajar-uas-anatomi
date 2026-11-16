@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="studio-grad" x1="8" y1="8" x2="56" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#fb7185" />
+    </linearGradient>
+    <radialGradient id="slice-glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#090d16" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="#090d16" />
+  <rect x="2" y="2" width="60" height="60" rx="14" stroke="#1e293b" stroke-width="1.5" />
+  <circle cx="32" cy="32" r="24" fill="url(#slice-glow)" />
+  <!-- Cross-section diagnostic ring -->
+  <circle cx="32" cy="32" r="19" stroke="url(#studio-grad)" stroke-width="2.5" stroke-dasharray="18 5" />
+  <!-- Axial anatomical silhouette + pulse trace -->
+  <ellipse cx="32" cy="32" rx="11.5" ry="13.5" stroke="#38bdf8" stroke-width="2" fill="#0f172a" />
+  <path
+    d="M17 32h7l3.2-6.5 4.4 13 3.4-6.5H47"
+    stroke="#fb7185"
+    stroke-width="2.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+  <!-- Calibration crosshairs -->
+  <path d="M32 6v5M32 53v5M6 32h5M53 32h5" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" />
+</svg>
